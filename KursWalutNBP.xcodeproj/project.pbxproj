@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB4230A9CEB074BCC826018F /* Pods_KursWalutNBP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */; };
 		F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56721344E840021D361 /* AppDelegate.swift */; };
 		F9A6D56A21344E840021D361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56921344E840021D361 /* ViewController.swift */; };
 		F9A6D56D21344E840021D361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D56B21344E840021D361 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.release.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.release.xcconfig"; sourceTree = "<group>"; };
+		AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KursWalutNBP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B521B6927C2C16DF57260B /* Pods-KursWalutNBP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.debug.xcconfig"; sourceTree = "<group>"; };
 		F9A6D56421344E840021D361 /* KursWalutNBP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KursWalutNBP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6D56721344E840021D361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9A6D56921344E840021D361 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4230A9CEB074BCC826018F /* Pods_KursWalutNBP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2266BCFAEC8CC142019A3AB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7B521B6927C2C16DF57260B /* Pods-KursWalutNBP.debug.xcconfig */,
+				1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC52C5C03BEA12055151C8EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9A6D55B21344E840021D361 = {
 			isa = PBXGroup;
 			children = (
 				F9A6D56621344E840021D361 /* KursWalutNBP */,
 				F9A6D56521344E840021D361 /* Products */,
+				2266BCFAEC8CC142019A3AB4 /* Pods */,
+				DC52C5C03BEA12055151C8EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9A6D57621344E860021D361 /* Build configuration list for PBXNativeTarget "KursWalutNBP" */;
 			buildPhases = (
+				9D58448997D1B186B8F9BB7E /* [CP] Check Pods Manifest.lock */,
 				F9A6D56021344E840021D361 /* Sources */,
 				F9A6D56121344E840021D361 /* Frameworks */,
 				F9A6D56221344E840021D361 /* Resources */,
+				B3FCFA756D0203AD81681D86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D58448997D1B186B8F9BB7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KursWalutNBP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3FCFA756D0203AD81681D86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9A6D56021344E840021D361 /* Sources */ = {
@@ -278,15 +343,13 @@
 		};
 		F9A6D57721344E860021D361 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B521B6927C2C16DF57260B /* Pods-KursWalutNBP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2BNX4295Q;
 				INFOPLIST_FILE = KursWalutNBP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +359,13 @@
 		};
 		F9A6D57821344E860021D361 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2BNX4295Q;
 				INFOPLIST_FILE = KursWalutNBP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
