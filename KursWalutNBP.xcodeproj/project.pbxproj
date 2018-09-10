@@ -8,24 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		EB4230A9CEB074BCC826018F /* Pods_KursWalutNBP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */; };
+		F99C9DE9213B14FF0027CF87 /* urlStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99C9DE8213B14FF0027CF87 /* urlStrings.plist */; };
+		F99C9DEB213BD2840027CF87 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */; };
+		F99C9DEE213BD40A0027CF87 /* GoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C9DED213BD40A0027CF87 /* GoldView.swift */; };
+		F9A66F4C213F037A00881B54 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F4B213F037A00881B54 /* Service.swift */; };
+		F9A66F572141998900881B54 /* HttpErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F562141998900881B54 /* HttpErrorEnum.swift */; };
+		F9A66F6D2144140800881B54 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F6C2144140800881B54 /* APIProvider.swift */; };
+		F9A66F6F214417B800881B54 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F6E214417B800881B54 /* CurrenciesViewController.swift */; };
+		F9A66F722144392000881B54 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F712144392000881B54 /* CollectionExtension.swift */; };
+		F9A66F742145150900881B54 /* InfoLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F732145150900881B54 /* InfoLabelsView.swift */; };
+		F9A66F792146CFA100881B54 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F782146CFA100881B54 /* BaseView.swift */; };
 		F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56721344E840021D361 /* AppDelegate.swift */; };
-		F9A6D56A21344E840021D361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56921344E840021D361 /* ViewController.swift */; };
-		F9A6D56D21344E840021D361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D56B21344E840021D361 /* Main.storyboard */; };
 		F9A6D56F21344E860021D361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D56E21344E860021D361 /* Assets.xcassets */; };
 		F9A6D57221344E860021D361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D57021344E860021D361 /* LaunchScreen.storyboard */; };
+		F9A6D57A2134509C0021D361 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D5792134509C0021D361 /* MainTabBarViewController.swift */; };
+		F9A6D57E213455E70021D361 /* GoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D57D213455E70021D361 /* GoldViewController.swift */; };
+		F9A6D58421352DDA0021D361 /* GoldRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D58321352DDA0021D361 /* GoldRate.swift */; };
+		F9A6D58621352DF10021D361 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D58521352DF10021D361 /* Currencies.swift */; };
+		F9A6D58821352EF60021D361 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D58721352EF60021D361 /* Rate.swift */; };
+		F9D06322213E9AE900C832E8 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D06321213E9AE900C832E8 /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.release.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.release.xcconfig"; sourceTree = "<group>"; };
 		AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KursWalutNBP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B521B6927C2C16DF57260B /* Pods-KursWalutNBP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.debug.xcconfig"; sourceTree = "<group>"; };
+		F99C9DE8213B14FF0027CF87 /* urlStrings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = urlStrings.plist; sourceTree = "<group>"; };
+		F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		F99C9DED213BD40A0027CF87 /* GoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldView.swift; sourceTree = "<group>"; };
+		F9A66F4B213F037A00881B54 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F9A66F562141998900881B54 /* HttpErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpErrorEnum.swift; sourceTree = "<group>"; };
+		F9A66F6C2144140800881B54 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		F9A66F6E214417B800881B54 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		F9A66F712144392000881B54 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		F9A66F732145150900881B54 /* InfoLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelsView.swift; sourceTree = "<group>"; };
+		F9A66F782146CFA100881B54 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F9A6D56421344E840021D361 /* KursWalutNBP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KursWalutNBP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6D56721344E840021D361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9A6D56921344E840021D361 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9A6D56C21344E840021D361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9A6D56E21344E860021D361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9A6D57121344E860021D361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9A6D57321344E860021D361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9A6D5792134509C0021D361 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		F9A6D57D213455E70021D361 /* GoldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldViewController.swift; sourceTree = "<group>"; };
+		F9A6D58321352DDA0021D361 /* GoldRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldRate.swift; sourceTree = "<group>"; };
+		F9A6D58521352DF10021D361 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		F9A6D58721352EF60021D361 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		F9D06321213E9AE900C832E8 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +85,103 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9A66F4A213F033700881B54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F4B213F037A00881B54 /* Service.swift */,
+				F9A66F562141998900881B54 /* HttpErrorEnum.swift */,
+				F9A66F6C2144140800881B54 /* APIProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F9A66F4D213F05B300881B54 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6D56721344E840021D361 /* AppDelegate.swift */,
+				F9A6D5792134509C0021D361 /* MainTabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F9A66F4E213F05E400881B54 /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F4F213F064600881B54 /* Model */,
+				F9A66F50213F067400881B54 /* View */,
+				F9A66F51213F067B00881B54 /* Controller */,
+			);
+			path = Currencies;
+			sourceTree = "<group>";
+		};
+		F9A66F4F213F064600881B54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6D58521352DF10021D361 /* Currencies.swift */,
+				F9A6D58721352EF60021D361 /* Rate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9A66F50213F067400881B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */,
+				F9A66F732145150900881B54 /* InfoLabelsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9A66F51213F067B00881B54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F6E214417B800881B54 /* CurrenciesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9A66F52213F069900881B54 /* Gold */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F55213F06A900881B54 /* Controller */,
+				F9A66F54213F06A500881B54 /* View */,
+				F9A66F53213F069F00881B54 /* Model */,
+			);
+			path = Gold;
+			sourceTree = "<group>";
+		};
+		F9A66F53213F069F00881B54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6D58321352DDA0021D361 /* GoldRate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9A66F54213F06A500881B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F99C9DED213BD40A0027CF87 /* GoldView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9A66F55213F06A900881B54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6D57D213455E70021D361 /* GoldViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9A66F772146CF8700881B54 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F782146CFA100881B54 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F9A6D55B21344E840021D361 = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +203,35 @@
 		F9A6D56621344E840021D361 /* KursWalutNBP */ = {
 			isa = PBXGroup;
 			children = (
-				F9A6D56721344E840021D361 /* AppDelegate.swift */,
-				F9A6D56921344E840021D361 /* ViewController.swift */,
-				F9A6D56B21344E840021D361 /* Main.storyboard */,
-				F9A6D56E21344E860021D361 /* Assets.xcassets */,
-				F9A6D57021344E860021D361 /* LaunchScreen.storyboard */,
-				F9A6D57321344E860021D361 /* Info.plist */,
+				F9A66F4D213F05B300881B54 /* Main */,
+				F9A66F772146CF8700881B54 /* Base */,
+				F9A66F52213F069900881B54 /* Gold */,
+				F9A66F4E213F05E400881B54 /* Currencies */,
+				F9A66F4A213F033700881B54 /* Services */,
+				F9A6D58D2137F3690021D361 /* Resources */,
+				F9D06323213E9D6100C832E8 /* Extensions */,
 			);
 			path = KursWalutNBP;
+			sourceTree = "<group>";
+		};
+		F9A6D58D2137F3690021D361 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6D57321344E860021D361 /* Info.plist */,
+				F99C9DE8213B14FF0027CF87 /* urlStrings.plist */,
+				F9A6D56E21344E860021D361 /* Assets.xcassets */,
+				F9A6D57021344E860021D361 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F9D06323213E9D6100C832E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9D06321213E9AE900C832E8 /* DoubleExtension.swift */,
+				F9A66F712144392000881B54 /* CollectionExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99C9DE9213B14FF0027CF87 /* urlStrings.plist in Resources */,
 				F9A6D57221344E860021D361 /* LaunchScreen.storyboard in Resources */,
 				F9A6D56F21344E860021D361 /* Assets.xcassets in Resources */,
-				F9A6D56D21344E840021D361 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,22 +346,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9A6D56A21344E840021D361 /* ViewController.swift in Sources */,
+				F9D06322213E9AE900C832E8 /* DoubleExtension.swift in Sources */,
+				F9A6D58621352DF10021D361 /* Currencies.swift in Sources */,
+				F9A6D57E213455E70021D361 /* GoldViewController.swift in Sources */,
+				F9A66F792146CFA100881B54 /* BaseView.swift in Sources */,
+				F9A66F6F214417B800881B54 /* CurrenciesViewController.swift in Sources */,
+				F9A66F722144392000881B54 /* CollectionExtension.swift in Sources */,
+				F9A66F6D2144140800881B54 /* APIProvider.swift in Sources */,
+				F9A6D58821352EF60021D361 /* Rate.swift in Sources */,
+				F99C9DEB213BD2840027CF87 /* CurrencyTableViewCell.swift in Sources */,
+				F9A6D57A2134509C0021D361 /* MainTabBarViewController.swift in Sources */,
+				F9A6D58421352DDA0021D361 /* GoldRate.swift in Sources */,
+				F9A66F4C213F037A00881B54 /* Service.swift in Sources */,
+				F9A66F572141998900881B54 /* HttpErrorEnum.swift in Sources */,
+				F99C9DEE213BD40A0027CF87 /* GoldView.swift in Sources */,
 				F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */,
+				F9A66F742145150900881B54 /* InfoLabelsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F9A6D56B21344E840021D361 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9A6D56C21344E840021D361 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9A6D57021344E860021D361 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -348,8 +500,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2BNX4295Q;
-				INFOPLIST_FILE = KursWalutNBP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/KursWalutNBP/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -364,8 +519,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2BNX4295Q;
-				INFOPLIST_FILE = KursWalutNBP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/KursWalutNBP/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
