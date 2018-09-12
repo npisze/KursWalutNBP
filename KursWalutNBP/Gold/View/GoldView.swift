@@ -7,18 +7,36 @@
 //
 
 import UIKit
+import SnapKit
 
 class GoldView: BaseView {
 
-    override func addSubviews() {
-        
-    }
+    private let goldLabel = UILabel()
     
-    override func setupConstraints() {
-        
+    override func addSubviews() {
+        addSubview(goldLabel)
     }
     
     override func setupViews() {
+        backgroundColor = UIColor.white
         
+        goldLabel.backgroundColor = UIColor.clear
+        goldLabel.numberOfLines = 0
+        goldLabel.textAlignment = NSTextAlignment.center
+        goldLabel.text = "No data"
+    }
+    
+    override func setupConstraints() {
+        goldLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func updateGoldLabel(value: Double?, data: String?) {
+        guard let value = value, let data = data else {
+            goldLabel.text = "Na data"
+            return
+        }
+        goldLabel.text = "Aktualna cena 1 g złota, \nopublikowana dnia: \n\(data.asPlDate())\n wynosi: \(value.inCash)"
     }
 }

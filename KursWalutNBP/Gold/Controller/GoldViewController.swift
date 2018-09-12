@@ -10,11 +10,20 @@ import UIKit
 
 class GoldViewController: UIViewController {
 
+    lazy var contentView: GoldView = {
+        return GoldView(frame: .zero)
+    }()
+    
+    override func loadView() {
+        view = contentView
+    }
+    
     let service = DataService()
     
     var goldData: GoldRate? {
         didSet {
             goldRate = goldData
+            contentView.updateGoldLabel(value: goldData?.cena, data: goldData?.data)
         }
     }
     
@@ -27,10 +36,11 @@ class GoldViewController: UIViewController {
 
     private func fetchGoldData() {
 
-        service.fetchGoldData { (error, gold) in
+        service.fetchGoldData { [weak self] (error, gold) in
             guard let data = gold else {
                 return
             }
+            self?.goldData = data
         }
     }
 }

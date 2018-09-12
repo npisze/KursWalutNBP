@@ -23,13 +23,13 @@ final class DataService {
         }
     }
     
-    func fetchGoldData(completion: @escaping (_ error: Error?, _ data: [GoldRate]?) -> Void){
+    func fetchGoldData(completion: @escaping (_ error: Error?, _ data: GoldRate?) -> Void){
   
         guard let goldURL = getPlistUrl(for: "goldURL") else { return }
     
-        apiProvider.fetch(from: goldURL) { (error, gold) in
+        apiProvider.fetch(from: goldURL) { (error, gold: [GoldRate]?) in
             DispatchQueue.main.async {
-                completion(error, gold)
+                completion(error, gold?.first)
             }
         }
     }
