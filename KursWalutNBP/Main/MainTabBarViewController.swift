@@ -21,10 +21,8 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let currenciesVC = CurrenciesViewController()
         currenciesVC.title = "Kurs walut NBP"
         currenciesVC.tabBarItem = UITabBarItem(title: "Waluty", image: UIImage(named: "currencies"), tag: 0)
-        let navigationCurrencies = UINavigationController(rootViewController: currenciesVC)
-        navigationCurrencies.navigationBar.barTintColor = UIColor.orange
-        navigationCurrencies.navigationBar.isTranslucent = false
-        
+        let navigationCurrencies = MainNavigationController(rootViewController: currenciesVC)
+
         let goldVC = GoldViewController()
         goldVC.title = "Cena złota"
         goldVC.tabBarItem = UITabBarItem(title: "Złoto", image: UIImage(named: "gold"), tag: 1)
