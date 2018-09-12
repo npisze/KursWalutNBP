@@ -8,12 +8,13 @@
 
 import Foundation
 
-var numberFormatter = NumberFormatter()
+//var numberFormatter = NumberFormatter()
 extension Double {
     var inCash: String {
         get {
+            let numberFormatter = NumberFormatter() //
             numberFormatter.numberStyle = .decimal
-            numberFormatter.maximumSignificantDigits = 2
+            //numberFormatter.maximumSignificantDigits = 3
             let cashValue = numberFormatter.string(from: NSNumber(value: self))!
             return cashValue + " PLN"
         }
