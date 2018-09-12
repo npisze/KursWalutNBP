@@ -29,8 +29,8 @@ class InfoLabelsView: BaseView {
     }
     
     override func addSubviews() {
-        addSubview(tradingDateLabel)
-        addSubview(effectiveDateLabel)
+//        addSubview(tradingDateLabel)
+//        addSubview(effectiveDateLabel)
         addSubview(labelsStack)
     }
     
@@ -43,29 +43,31 @@ class InfoLabelsView: BaseView {
             $0.font = UIFont.boldSystemFont(ofSize: $0.font.pointSize)  // TODO: - not here
         }
         
-        setupLabel(tradingDateLabel, text: nil)
-        setupLabel(effectiveDateLabel, text: nil)
+//        setupLabel(tradingDateLabel, text: nil)
+//        setupLabel(effectiveDateLabel, text: nil)
         setupLabel(currencyCodeLabel, text: "Waluta")
         setupLabel(bidLabel, text: "Kupno")
         setupLabel(askLabel, text: "Sprzedaż")
     }
     
     override func setupConstraints() {
-        tradingDateLabel.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)   //  !!!! iOS 11.0+
-            make.height.equalTo(20)
-        }
-        
-        effectiveDateLabel.snp.makeConstraints { make in
-            make.top.equalTo(tradingDateLabel.snp.bottom)
-            make.left.right.equalTo(tradingDateLabel)
-            make.height.equalTo(20)
-        }
+//        tradingDateLabel.snp.makeConstraints { make in
+//            make.left.right.equalToSuperview()
+//            make.top.equalTo(safeAreaLayoutGuide.snp.top)   //  !!!! iOS 11.0+
+//            make.height.equalTo(20)
+//        }
+//
+//        effectiveDateLabel.snp.makeConstraints { make in
+//            make.top.equalTo(tradingDateLabel.snp.bottom)
+//            make.left.right.equalTo(tradingDateLabel)
+//            make.height.equalTo(20)
+//        }
         
         labelsStack.snp.makeConstraints { make in
-            make.top.equalTo(effectiveDateLabel.snp.bottom)
-            make.left.right.equalTo(effectiveDateLabel)
+//            make.top.equalTo(effectiveDateLabel.snp.bottom)
+//            make.left.right.equalTo(effectiveDateLabel)
+            make.left.right.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)   //  !!!! iOS 11.0+
             make.bottom.equalToSuperview()
             make.height.equalTo(30)
         }

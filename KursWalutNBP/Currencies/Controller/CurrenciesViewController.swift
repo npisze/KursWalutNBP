@@ -16,8 +16,8 @@ class CurrenciesViewController: UIViewController {
     
     private var actualCurrencies: Currencies? {
         didSet {
-            labelsView.configureLabels(tradingDate: actualCurrencies?.tradingDate,
-                                       effectiveDate: actualCurrencies?.effectiveDate)
+            self.navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate ?? "nieznana")")
+           // labelsView.configureLabels(tradingDate: actualCurrencies?.tradingDate, effectiveDate: actualCurrencies?.effectiveDate)
             currenciesTable.reloadData()
         }
     }
