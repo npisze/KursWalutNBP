@@ -20,6 +20,7 @@
 		F9A66F792146CFA100881B54 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F782146CFA100881B54 /* BaseView.swift */; };
 		F9A66F7D2149057700881B54 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F7C2149057700881B54 /* MainNavigationController.swift */; };
 		F9A66F7F2149376D00881B54 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F7E2149376D00881B54 /* StringExtension.swift */; };
+		F9A66F81214964DB00881B54 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F80214964DB00881B54 /* CurrencyView.swift */; };
 		F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56721344E840021D361 /* AppDelegate.swift */; };
 		F9A6D56F21344E860021D361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D56E21344E860021D361 /* Assets.xcassets */; };
 		F9A6D57221344E860021D361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D57021344E860021D361 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 		F9A66F782146CFA100881B54 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F9A66F7C2149057700881B54 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		F9A66F7E2149376D00881B54 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F9A66F80214964DB00881B54 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
 		F9A6D56421344E840021D361 /* KursWalutNBP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KursWalutNBP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6D56721344E840021D361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9A6D56E21344E860021D361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */,
 				F9A66F732145150900881B54 /* InfoLabelsView.swift */,
+				F9A66F80214964DB00881B54 /* CurrencyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				F9A6D57E213455E70021D361 /* GoldViewController.swift in Sources */,
 				F9A66F792146CFA100881B54 /* BaseView.swift in Sources */,
 				F9A66F6F214417B800881B54 /* CurrenciesViewController.swift in Sources */,
+				F9A66F81214964DB00881B54 /* CurrencyView.swift in Sources */,
 				F9A66F722144392000881B54 /* CollectionExtension.swift in Sources */,
 				F9A66F6D2144140800881B54 /* APIProvider.swift in Sources */,
 				F9A6D58821352EF60021D361 /* Rate.swift in Sources */,

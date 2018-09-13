@@ -11,40 +11,53 @@ import SnapKit
 
 class CurrenciesViewController: UIViewController {
 
-    private var currenciesTable = UITableView()
-    private var labelsView = InfoLabelsView()
+    lazy var contentView: CurrencyView = {
+        return CurrencyView(frame: .zero)
+    }()
+    
+    override func loadView() {
+        view = contentView
+    }
+    
+//    private var currenciesTable = UITableView()
+//    private var labelsView = InfoLabelsView()
     
     private var actualCurrencies: Currencies? {
         didSet {
-            self.navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate ?? "nieznana")")
-           // labelsView.configureLabels(tradingDate: actualCurrencies?.tradingDate, effectiveDate: actualCurrencies?.effectiveDate)
-            currenciesTable.reloadData()
+            self.navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate.asPlDate() ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate.asPlDate() ?? "nieznana")")
+            
+            //currenciesTable.reloadData()
+            contentView.reloadTable()
         }
     }
     private let service = DataService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpViews()
+//        setUpViews()
+        setUpTable()
         fetchCurrenciesData()
     }
 
-    private func setUpViews() {
-        view.addSubview(labelsView)
-        labelsView.snp.makeConstraints { make in
-            make.top.right.left.equalToSuperview()
-        }
-
-        currenciesTable.delegate = self
-        currenciesTable.dataSource = self
-        currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
-        view.addSubview(currenciesTable)
-
-        currenciesTable.snp.makeConstraints { make in
-            make.top.equalTo(labelsView.snp.bottom)
-            make.bottom.left.right.equalToSuperview()
-        }
+    private func setUpTable() {
+        contentView.setUPTable(delegate: self, dataSource: self)
     }
+//    private func setUpViews() {
+//        view.addSubview(labelsView)
+//        labelsView.snp.makeConstraints { make in
+//            make.top.right.left.equalToSuperview()
+//        }
+//
+//        currenciesTable.delegate = self
+//        currenciesTable.dataSource = self
+//        currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
+//        view.addSubview(currenciesTable)
+//
+//        currenciesTable.snp.makeConstraints { make in
+//            make.top.equalTo(labelsView.snp.bottom)
+//            make.bottom.left.right.equalToSuperview()
+//        }
+//    }
     
     private func fetchCurrenciesData() {
         // TODO: - start Activity indicator
