@@ -57,7 +57,7 @@ class CurrencyTableViewCell: UITableViewCell {
         
         contentView.addSubview(labelsStack)
         labelsStack.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.contentView)
+            make.edges.equalTo(contentView)
         }
     }
 

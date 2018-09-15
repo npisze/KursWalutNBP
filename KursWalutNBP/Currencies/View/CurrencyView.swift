@@ -18,6 +18,7 @@ class CurrencyView: BaseView {
         currenciesTable.delegate = delegate
         currenciesTable.dataSource = dataSource
         currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
+        currenciesTable.allowsSelection = false
     }
     
     func reloadTable() {
@@ -40,6 +41,6 @@ class CurrencyView: BaseView {
     }
     
     override func setupViews() {
-        
+        backgroundColor = UIColor.orange
     }
 }

@@ -14,7 +14,7 @@ extension String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "pl")
         formatter.dateFormat = "yyyy-MM-dd"
-        guard let newDate = formatter.date(from: self) else { return "no data" }
+        guard let newDate = formatter.date(from: self) else { return "no date" }
         formatter.dateFormat = "d MMMM yyyy"
         let newStringDate = formatter.string(from: newDate)
         return newStringDate

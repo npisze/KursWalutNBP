@@ -35,11 +35,8 @@ class GoldViewController: UIViewController {
     }
 
     private func fetchGoldData() {
-
         service.fetchGoldData { [weak self] (error, gold) in
-            guard let data = gold else {
-                return
-            }
+            guard let data = gold else { return }
             self?.goldData = data
         }
     }
