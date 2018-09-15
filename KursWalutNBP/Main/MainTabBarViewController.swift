@@ -26,12 +26,27 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let goldVC = GoldViewController()
         goldVC.title = "Cena złota"
         goldVC.tabBarItem = UITabBarItem(title: "Złoto", image: UIImage(named: "gold"), tag: 1)
-        let navigationGold = UINavigationController(rootViewController: goldVC)
-        navigationGold.navigationBar.barTintColor = UIColor.orange
-        navigationGold.navigationBar.isTranslucent = false
+        let navigationGold = MainNavigationController(rootViewController: goldVC)
         
         viewControllers = [navigationCurrencies, navigationGold]
     }
 
-
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        guard let selectedVC = tabBarController.selectedViewController, let fromView: UIView = selectedVC.view else { return false } // tabBarController.selectedViewController!.view <--- Kiedy to może wybuchnąć?
+        let toView  : UIView = viewController.view
+        if fromView == toView {
+            return false
+        }
+        
+        if tabBarController.selectedIndex == 0 {
+            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIViewAnimationOptions.transitionFlipFromRight) { (finished:Bool) in
+            }
+        } else {
+            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIViewAnimationOptions.transitionFlipFromLeft) { (finished:Bool) in
+            }
+        }
+        return true
+    }
+    
 }
