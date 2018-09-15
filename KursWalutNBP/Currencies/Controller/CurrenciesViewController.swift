@@ -18,15 +18,10 @@ class CurrenciesViewController: UIViewController {
     override func loadView() {
         view = contentView
     }
-    
-//    private var currenciesTable = UITableView()
-//    private var labelsView = InfoLabelsView()
-    
+
     private var actualCurrencies: Currencies? {
         didSet {
-            self.navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate.asPlDate() ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate.asPlDate() ?? "nieznana")")
-            
-            //currenciesTable.reloadData()
+            navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate.asPlDate() ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate.asPlDate() ?? "nieznana")")
             contentView.reloadTable()
         }
     }
@@ -34,40 +29,31 @@ class CurrenciesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setUpViews()
         setUpTable()
         fetchCurrenciesData()
     }
-
+    
     private func setUpTable() {
         contentView.setUPTable(delegate: self, dataSource: self)
     }
-//    private func setUpViews() {
-//        view.addSubview(labelsView)
-//        labelsView.snp.makeConstraints { make in
-//            make.top.right.left.equalToSuperview()
-//        }
-//
-//        currenciesTable.delegate = self
-//        currenciesTable.dataSource = self
-//        currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
-//        view.addSubview(currenciesTable)
-//
-//        currenciesTable.snp.makeConstraints { make in
-//            make.top.equalTo(labelsView.snp.bottom)
-//            make.bottom.left.right.equalToSuperview()
-//        }
-//    }
     
     private func fetchCurrenciesData() {
         // TODO: - start Activity indicator
         
         service.fetchCurrencies { [weak self] (error, currencies) in
-            guard let data = currencies else { return }
+            guard let data = currencies else { return } // TODO: - "Something went wrong" View if error
             self?.actualCurrencies = data
         }
         
         // TODO: - stop Activity indicator
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        } else {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
 }
 
@@ -76,7 +62,16 @@ class CurrenciesViewController: UIViewController {
 extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return actualCurrencies?.rates.count ?? 0
+        let numOfSections: Int = actualCurrencies?.rates.count ?? 0
+        if numOfSections > 0 {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView = nil
+        } else {
+            let noDataView = ErrorView()
+            tableView.backgroundView = noDataView
+            tableView.separatorStyle = .none
+        }
+        return numOfSections
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

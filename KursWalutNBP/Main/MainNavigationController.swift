@@ -16,8 +16,8 @@ class MainNavigationController: UINavigationController {
     }
     
     private func configure() {
-        self.navigationBar.barTintColor = UIColor.orange
-        self.navigationBar.isTranslucent = false
+        navigationBar.barTintColor = UIColor.orange
+        navigationBar.isTranslucent = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,6 +36,6 @@ extension UINavigationItem {
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
         label.text = title
-        self.titleView = label
+        titleView = label
     }
 }
