@@ -26,7 +26,7 @@ class InfoLabelsView: BaseView {
         
         [currencyCodeLabel, bidLabel, askLabel].forEach {
             labelsStack.addArrangedSubview($0)
-            $0.font = UIFont.boldSystemFont(ofSize: $0.font.pointSize)  // TODO: - not here
+            $0.bold()
         }
         
         setupLabel(currencyCodeLabel, text: "Waluta")

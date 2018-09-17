@@ -25,13 +25,11 @@ final class APIProvider {
             }
             
             var fetchResponse: T?
-            
-            // 3) func handle reponse code
-            
+
             // TODO: - ParseError
             if (200...299).contains(response.statusCode) {
                 fetchResponse = self.parse(data: data)
-            } else { // http code != 2xx
+            } else {
                 completion(HttpError.httpResponseCodeError(response.statusCode), nil)
                 return
             }
@@ -41,7 +39,6 @@ final class APIProvider {
         
     }
     
-    // 4) func parse model
     func parse<A: Decodable>(data: Data) -> A? {
         if let actualCurrencies = try? JSONDecoder().decode(A.self, from: data) {
             return actualCurrencies

@@ -22,6 +22,7 @@
 		F9A66F7F2149376D00881B54 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F7E2149376D00881B54 /* StringExtension.swift */; };
 		F9A66F81214964DB00881B54 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F80214964DB00881B54 /* CurrencyView.swift */; };
 		F9A66F83214A750900881B54 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F82214A750900881B54 /* ErrorView.swift */; };
+		F9A66F87214D6DCA00881B54 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A66F86214D6DCA00881B54 /* LabelExtension.swift */; };
 		F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D56721344E840021D361 /* AppDelegate.swift */; };
 		F9A6D56F21344E860021D361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D56E21344E860021D361 /* Assets.xcassets */; };
 		F9A6D57221344E860021D361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6D57021344E860021D361 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		F9A66F7E2149376D00881B54 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F9A66F80214964DB00881B54 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
 		F9A66F82214A750900881B54 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F9A66F86214D6DCA00881B54 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		F9A6D56421344E840021D361 /* KursWalutNBP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KursWalutNBP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6D56721344E840021D361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9A6D56E21344E860021D361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				F9D06321213E9AE900C832E8 /* DoubleExtension.swift */,
 				F9A66F712144392000881B54 /* CollectionExtension.swift */,
 				F9A66F7E2149376D00881B54 /* StringExtension.swift */,
+				F9A66F86214D6DCA00881B54 /* LabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A66F87214D6DCA00881B54 /* LabelExtension.swift in Sources */,
 				F9D06322213E9AE900C832E8 /* DoubleExtension.swift in Sources */,
 				F9A6D58621352DF10021D361 /* Currencies.swift in Sources */,
 				F9A6D57E213455E70021D361 /* GoldViewController.swift in Sources */,

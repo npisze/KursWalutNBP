@@ -34,12 +34,15 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
         guard let selectedVC = tabBarController.selectedViewController, let fromView: UIView = selectedVC.view else { return false } // tabBarController.selectedViewController!.view <--- Kiedy to może wybuchnąć?
-        let toView  : UIView = viewController.view
+        let toView: UIView = viewController.view
         if fromView == toView {
             return false
         }
+
+        let fromIndex = tabBarController.selectedIndex
+        let toIndex = viewControllers?.index(of: viewController)
         
-        if tabBarController.selectedIndex == 0 {
+        if fromIndex > toIndex! { // <--- kiedy to wybuchnie?
             UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIViewAnimationOptions.transitionFlipFromRight) { (finished:Bool) in
             }
         } else {

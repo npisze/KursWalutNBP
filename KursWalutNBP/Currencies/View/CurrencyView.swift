@@ -24,7 +24,7 @@ class CurrencyView: BaseView {
     func reloadTable() {
         currenciesTable.reloadData()
     }
-    
+
     override func addSubviews() {
         addSubview(labelsView)
         addSubview(currenciesTable)
