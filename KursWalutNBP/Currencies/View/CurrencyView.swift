@@ -41,7 +41,7 @@ class CurrencyView: BaseView {
             make.bottom.left.right.equalToSuperview()
         }
         spinnerView.snp.makeConstraints { make in
-            make.center.equalTo(currenciesTable.snp.center)
+            make.edges.equalTo(currenciesTable)
         }
     }
     

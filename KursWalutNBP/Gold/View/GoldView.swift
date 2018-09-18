@@ -31,7 +31,7 @@ class GoldView: BaseView {
             make.edges.equalToSuperview()
         }
         spinnerView.snp.makeConstraints { make in
-            make.center.equalTo(self.snp.center)
+            make.edges.equalToSuperview()
         }
     }
     

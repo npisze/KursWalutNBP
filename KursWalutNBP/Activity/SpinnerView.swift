@@ -10,14 +10,16 @@ import UIKit
 
 class SpinnerView: BaseView {
     
-    var activityIndicator = UIActivityIndicatorView()
+    private let activityIndicator = UIActivityIndicatorView()
     
     override func addSubviews() {
         addSubview(activityIndicator)
     }
     
     override func setupConstraints() {
-        activityIndicator.center = self.center
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
     override func setupViews() {
