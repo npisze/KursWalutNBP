@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB4230A9CEB074BCC826018F /* Pods_KursWalutNBP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */; };
+		F920209A21513E5100772A64 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F920209921513E5100772A64 /* SpinnerView.swift */; };
 		F99C9DE9213B14FF0027CF87 /* urlStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99C9DE8213B14FF0027CF87 /* urlStrings.plist */; };
 		F99C9DEB213BD2840027CF87 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */; };
 		F99C9DEE213BD40A0027CF87 /* GoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C9DED213BD40A0027CF87 /* GoldView.swift */; };
@@ -38,6 +39,7 @@
 		1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.release.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.release.xcconfig"; sourceTree = "<group>"; };
 		AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KursWalutNBP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B521B6927C2C16DF57260B /* Pods-KursWalutNBP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.debug.xcconfig"; sourceTree = "<group>"; };
+		F920209921513E5100772A64 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		F99C9DE8213B14FF0027CF87 /* urlStrings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = urlStrings.plist; sourceTree = "<group>"; };
 		F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		F99C9DED213BD40A0027CF87 /* GoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 				AEDD385142520512344BB2DB /* Pods_KursWalutNBP.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F92020942151386900772A64 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F920209921513E5100772A64 /* SpinnerView.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		F9A66F4A213F033700881B54 /* Services */ = {
@@ -216,6 +226,7 @@
 		F9A6D56621344E840021D361 /* KursWalutNBP */ = {
 			isa = PBXGroup;
 			children = (
+				F92020942151386900772A64 /* Activity */,
 				F9A66F4D213F05B300881B54 /* Main */,
 				F9A66F772146CF8700881B54 /* Base */,
 				F9A66F52213F069900881B54 /* Gold */,
@@ -381,6 +392,7 @@
 				F9A66F7F2149376D00881B54 /* StringExtension.swift in Sources */,
 				F99C9DEE213BD40A0027CF87 /* GoldView.swift in Sources */,
 				F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */,
+				F920209A21513E5100772A64 /* SpinnerView.swift in Sources */,
 				F9A66F742145150900881B54 /* InfoLabelsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

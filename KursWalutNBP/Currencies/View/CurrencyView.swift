@@ -11,6 +11,7 @@ import SnapKit
 
 class CurrencyView: BaseView {
     
+    private let spinnerView = SpinnerView()
     private var currenciesTable = UITableView()
     private var labelsView = InfoLabelsView()
     
@@ -28,6 +29,7 @@ class CurrencyView: BaseView {
     override func addSubviews() {
         addSubview(labelsView)
         addSubview(currenciesTable)
+        addSubview(spinnerView)
     }
     
     override func setupConstraints() {
@@ -38,9 +40,25 @@ class CurrencyView: BaseView {
             make.top.equalTo(labelsView.snp.bottom)
             make.bottom.left.right.equalToSuperview()
         }
+        spinnerView.snp.makeConstraints { make in
+            make.center.equalTo(currenciesTable.snp.center)
+        }
     }
     
     override func setupViews() {
         backgroundColor = UIColor.orange
+    }
+    
+    func startIndicator(){
+        DispatchQueue.main.async { [weak self] in
+            self?.spinnerView.start()
+        }
+    }
+    
+    func stopIndicator() {
+        DispatchQueue.main.async { [weak self] in
+            self?.spinnerView.stop()
+            self?.spinnerView.removeFromSuperview()
+        }
     }
 }

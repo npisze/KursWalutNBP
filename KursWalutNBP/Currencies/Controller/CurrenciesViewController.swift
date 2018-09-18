@@ -21,7 +21,8 @@ class CurrenciesViewController: UIViewController {
 
     private var actualCurrencies: Currencies? {
         didSet {
-            navigationItem.changeTitle(to: "Data notowania: \(actualCurrencies?.tradingDate.asPlDate() ?? "nieznana")\nData publikacji: \(actualCurrencies?.effectiveDate.asPlDate() ?? "nieznana")")
+            guard let tradingDate = actualCurrencies?.tradingDate, let effectiveDate = actualCurrencies?.effectiveDate else { return }
+            navigationItem.changeTitle(to: "Data notowania: \(tradingDate.asPlDate())\nData publikacji: \(effectiveDate.asPlDate())")
             contentView.reloadTable()
         }
     }
@@ -38,14 +39,12 @@ class CurrenciesViewController: UIViewController {
     }
     
     private func fetchCurrenciesData() {
-        // TODO: - start Activity indicator
-        
+        contentView.startIndicator()
         service.fetchCurrencies { [weak self] (error, currencies) in
             guard let data = currencies else { return } // TODO: - "Something went wrong" View if error
             self?.actualCurrencies = data
+            self?.contentView.stopIndicator()
         }
-        
-        // TODO: - stop Activity indicator
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -67,8 +66,8 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.separatorStyle = .singleLine
             tableView.backgroundView = nil
         } else {
-            let noDataView = ErrorView()
-            tableView.backgroundView = noDataView
+//            let noDataView = ErrorView()
+//            tableView.backgroundView = noDataView
             tableView.separatorStyle = .none
         }
         return numOfSections

@@ -11,10 +11,12 @@ import SnapKit
 
 class GoldView: BaseView {
 
+    private let spinnerView = SpinnerView()
     private let goldLabel = UILabel()
     
     override func addSubviews() {
         addSubview(goldLabel)
+        addSubview(spinnerView)
     }
     
     override func setupViews() {
@@ -22,17 +24,32 @@ class GoldView: BaseView {
         goldLabel.backgroundColor = UIColor.clear
         goldLabel.numberOfLines = 0
         goldLabel.textAlignment = NSTextAlignment.center
-        goldLabel.text = "There seems to be a problem."
     }
     
     override func setupConstraints() {
         goldLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        spinnerView.snp.makeConstraints { make in
+            make.center.equalTo(self.snp.center)
+        }
     }
     
     func updateGoldLabel(value: Double?, data: String?) {
         guard let value = value, let data = data else { return }
         goldLabel.text = "Aktualna cena 1 g złota, \nopublikowana dnia: \n\(data.asPlDate())\n wynosi: \(value.inCash)"
+    }
+    
+    func startIndicator(){
+        DispatchQueue.main.async { [weak self] in
+            self?.spinnerView.start()
+        }
+    }
+    
+    func stopIndicator() {
+        DispatchQueue.main.async { [weak self] in
+            self?.spinnerView.stop()
+            self?.spinnerView.removeFromSuperview()
+        }
     }
 }

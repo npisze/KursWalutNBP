@@ -37,7 +37,7 @@ class InfoLabelsView: BaseView {
     override func setupConstraints() {
         labelsStack.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)   //  !!!! iOS 11.0+
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)   // iOS 11.0+
             make.bottom.equalToSuperview()
             make.height.equalTo(30)
         }

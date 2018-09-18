@@ -35,9 +35,11 @@ class GoldViewController: UIViewController {
     }
 
     private func fetchGoldData() {
+        contentView.startIndicator()
         service.fetchGoldData { [weak self] (error, gold) in
             guard let data = gold else { return }
             self?.goldData = data
+            self?.contentView.stopIndicator()
         }
     }
 }
