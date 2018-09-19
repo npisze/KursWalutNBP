@@ -28,7 +28,12 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         goldVC.tabBarItem = UITabBarItem(title: "Złoto", image: UIImage(named: "gold"), tag: 1)
         let navigationGold = MainNavigationController(rootViewController: goldVC)
         
-        viewControllers = [navigationCurrencies, navigationGold]
+        let walletVC = WalletViewController()
+        walletVC.title = "Portfel"
+        walletVC.tabBarItem = UITabBarItem(title: "Portfel", image: UIImage(named: "wallet"), tag: 2)
+        let navigationWallet = MainNavigationController(rootViewController: walletVC)
+        
+        viewControllers = [navigationCurrencies, navigationGold, navigationWallet]
     }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {

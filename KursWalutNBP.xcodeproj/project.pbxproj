@@ -33,6 +33,8 @@
 		F9A6D58621352DF10021D361 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D58521352DF10021D361 /* Currencies.swift */; };
 		F9A6D58821352EF60021D361 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6D58721352EF60021D361 /* Rate.swift */; };
 		F9D06322213E9AE900C832E8 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D06321213E9AE900C832E8 /* DoubleExtension.swift */; };
+		F9D5B03D2152647B001D182F /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5B03C2152647B001D182F /* WalletViewController.swift */; };
+		F9D5B040215264AC001D182F /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5B03F215264AC001D182F /* WalletView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		F9A6D58521352DF10021D361 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		F9A6D58721352EF60021D361 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		F9D06321213E9AE900C832E8 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		F9D5B03C2152647B001D182F /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		F9D5B03F215264AC001D182F /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 		F9A6D56621344E840021D361 /* KursWalutNBP */ = {
 			isa = PBXGroup;
 			children = (
+				F9D5B03A21526451001D182F /* Wallet */,
 				F92020942151386900772A64 /* Activity */,
 				F9A66F4D213F05B300881B54 /* Main */,
 				F9A66F772146CF8700881B54 /* Base */,
@@ -258,6 +263,31 @@
 				F9A66F86214D6DCA00881B54 /* LabelExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F9D5B03A21526451001D182F /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				F9D5B03E2152649E001D182F /* View */,
+				F9D5B03B2152645D001D182F /* Controller */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		F9D5B03B2152645D001D182F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9D5B03C2152647B001D182F /* WalletViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9D5B03E2152649E001D182F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9D5B03F215264AC001D182F /* WalletView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +409,7 @@
 				F9A66F792146CFA100881B54 /* BaseView.swift in Sources */,
 				F9A66F6F214417B800881B54 /* CurrenciesViewController.swift in Sources */,
 				F9A66F81214964DB00881B54 /* CurrencyView.swift in Sources */,
+				F9D5B03D2152647B001D182F /* WalletViewController.swift in Sources */,
 				F9A66F722144392000881B54 /* CollectionExtension.swift in Sources */,
 				F9A66F6D2144140800881B54 /* APIProvider.swift in Sources */,
 				F9A6D58821352EF60021D361 /* Rate.swift in Sources */,
@@ -394,6 +425,7 @@
 				F9A6D56821344E840021D361 /* AppDelegate.swift in Sources */,
 				F920209A21513E5100772A64 /* SpinnerView.swift in Sources */,
 				F9A66F742145150900881B54 /* InfoLabelsView.swift in Sources */,
+				F9D5B040215264AC001D182F /* WalletView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
