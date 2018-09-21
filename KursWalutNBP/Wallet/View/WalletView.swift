@@ -16,10 +16,10 @@ class WalletView: BaseView {
     }
     
     override func setupConstraints() {
-        backgroundColor = UIColor.green
+        
     }
     
     override func setupViews() {
-        
+        backgroundColor = UIColor.white
     }
 }

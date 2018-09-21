@@ -22,6 +22,10 @@ class CurrencyView: BaseView {
         currenciesTable.allowsSelection = false
     }
     
+    func addRefresh(_ refreshControl: UIRefreshControl) {
+        currenciesTable.addSubview(refreshControl)
+    }
+    
     func reloadTable() {
         currenciesTable.reloadData()
     }

@@ -11,6 +11,10 @@ import SnapKit
 
 class CurrenciesViewController: UIViewController {
 
+    lazy var refreshControl: UIRefreshControl = {
+        return UIRefreshControl()
+    }()
+    
     lazy var contentView: CurrencyView = {
         return CurrencyView(frame: .zero)
     }()
@@ -30,12 +34,28 @@ class CurrenciesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRefreshControl()
         setUpTable()
         fetchCurrenciesData()
     }
     
+    private func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refrechData(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.orange
+        
+    }
+    
+    @objc func refrechData(_ refreshControl: UIRefreshControl) {
+        service.fetchCurrencies { [weak self] (error, currencies) in
+            guard let data = currencies else { return } // TODO: - "Something went wrong" View if error
+            self?.actualCurrencies = data
+            refreshControl.endRefreshing()
+        }
+    }
+    
     private func setUpTable() {
         contentView.setUPTable(delegate: self, dataSource: self)
+        contentView.addRefresh(refreshControl)
     }
     
     private func fetchCurrenciesData() {
