@@ -31,6 +31,17 @@ class GoldViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavBar()
+        fetchGoldData()
+    }
+    
+    private func setUpNavBar() {
+        let refreshBtn = UIBarButtonItem(image: UIImage(named: "refresh"), style: .plain, target: self, action:#selector(refreshGoldData))
+        refreshBtn.tintColor = .black
+        navigationItem.setRightBarButton(refreshBtn, animated: true)
+    }
+    
+    @objc func refreshGoldData() {
         fetchGoldData()
     }
 
