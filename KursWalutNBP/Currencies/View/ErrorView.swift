@@ -12,14 +12,31 @@ import SnapKit
 class ErrorView: BaseView {
     
     let errorLabel = UILabel()
-
+    let refreshBtn = UIButton()
+    
+    func addRefreshButton(btnVC: RefreshButton) {
+        addSubview(refreshBtn)
+        
+        refreshBtn.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(errorLabel.snp.bottom)
+            make.height.equalTo(50)
+        }
+        
+        refreshBtn.setTitle("Refresh", for: .normal)
+        refreshBtn.setTitleColor(.orange, for: .normal)
+        refreshBtn.addTarget(btnVC, action: #selector(RefreshButton.refresh), for: .touchUpInside)
+    }
+    
     override func addSubviews() {
         addSubview(errorLabel)
     }
     
     override func setupConstraints() {
         errorLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-50)
+            make.height.equalTo(50)
         }
     }
     

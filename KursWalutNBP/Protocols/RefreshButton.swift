@@ -6,4 +6,8 @@
 //  Copyright © 2018 npisze. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@objc protocol RefreshButton {
+    @objc func refresh()
+}
