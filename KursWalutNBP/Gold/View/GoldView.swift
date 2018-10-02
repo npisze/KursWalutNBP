@@ -13,10 +13,12 @@ class GoldView: BaseView {
 
     private let spinnerView = SpinnerView()
     private let goldLabel = UILabel()
+    private let errorView = ErrorView()
     
     override func addSubviews() {
         addSubview(goldLabel)
         addSubview(spinnerView)
+        addSubview(errorView)
     }
     
     override func setupViews() {
@@ -25,6 +27,8 @@ class GoldView: BaseView {
         goldLabel.backgroundColor = UIColor.clear
         goldLabel.numberOfLines = 0
         goldLabel.textAlignment = NSTextAlignment.center
+        
+        errorView.isHidden = true
     }
     
     override func setupConstraints() {
@@ -32,6 +36,9 @@ class GoldView: BaseView {
             make.edges.equalToSuperview()
         }
         spinnerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        errorView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
@@ -52,5 +59,10 @@ class GoldView: BaseView {
             self?.spinnerView.stop()
             self?.spinnerView.removeFromSuperview()
         }
+    }
+    
+    func errorView(isVisible: Bool) {
+        errorView.isHidden = !isVisible
+        goldLabel.isHidden = isVisible
     }
 }

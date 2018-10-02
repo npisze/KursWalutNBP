@@ -48,7 +48,12 @@ class GoldViewController: UIViewController {
     private func fetchGoldData() {
         contentView.startIndicator()
         service.fetchGoldData { [weak self] (error, gold) in
-            guard let data = gold else { return }
+            guard let data = gold else {
+                self?.contentView.stopIndicator()
+                self?.contentView.errorView(isVisible: true)
+                return
+            }
+            self?.contentView.errorView(isVisible: false)
             self?.goldData = data
             self?.contentView.stopIndicator()
         }
