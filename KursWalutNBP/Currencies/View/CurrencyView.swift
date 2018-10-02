@@ -14,11 +14,13 @@ class CurrencyView: BaseView {
     private let spinnerView = SpinnerView()
     private var currenciesTable = UITableView()
     private var labelsView = InfoLabelsView()
+    private let errorView = ErrorView()
     
     override func addSubviews() {
         addSubview(labelsView)
         addSubview(currenciesTable)
         addSubview(spinnerView)
+        addSubview(errorView)
     }
     
     override func setupConstraints() {
@@ -32,10 +34,16 @@ class CurrencyView: BaseView {
         spinnerView.snp.makeConstraints { make in
             make.edges.equalTo(currenciesTable)
         }
+
+        errorView.snp.makeConstraints { make in
+            make.top.equalTo(labelsView.snp.bottom)
+            make.bottom.left.right.equalToSuperview()
+        }
     }
     
     override func setupViews() {
         backgroundColor = UIColor.orange
+        errorView.isHidden = true
     }
     
     func errorViewAddRefreshBtn(withTarget target: RefreshButton){
@@ -69,5 +77,10 @@ class CurrencyView: BaseView {
             self?.spinnerView.stop()
             self?.spinnerView.removeFromSuperview()
         }
+    }
+    
+    func errorView(isVisible: Bool) {
+        errorView.isHidden = !isVisible
+        currenciesTable.isHidden = isVisible
     }
 }

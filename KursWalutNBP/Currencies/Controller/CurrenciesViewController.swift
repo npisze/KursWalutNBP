@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class CurrenciesViewController: UIViewController {
+class CurrenciesViewController: UIViewController, RefreshButton {
 
     lazy var refreshControl: UIRefreshControl = {
         return UIRefreshControl()
@@ -18,10 +18,6 @@ class CurrenciesViewController: UIViewController {
     lazy var contentView: CurrencyView = {
         return CurrencyView(frame: .zero)
     }()
-    
-    override func loadView() {
-        view = contentView
-    }
 
     private var actualCurrencies: Currencies? {
         didSet {
@@ -30,7 +26,13 @@ class CurrenciesViewController: UIViewController {
             contentView.reloadTable()
         }
     }
+    
     private let service = DataService()
+    
+    override func loadView() {
+        view = contentView
+        setupErrorView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +41,24 @@ class CurrenciesViewController: UIViewController {
         fetchCurrenciesData()
     }
     
+    private func setupErrorView(){
+        contentView.errorViewAddRefreshBtn(withTarget: self)
+    }
+    
     private func setupRefreshControl() {
         refreshControl.addTarget(self, action: #selector(refrechData(_:)), for: UIControlEvents.valueChanged)
         refreshControl.tintColor = UIColor.orange
         
     }
-    
+
     @objc func refrechData(_ refreshControl: UIRefreshControl) {
         service.fetchCurrencies { [weak self] (error, currencies) in
-            guard let data = currencies else { return } // TODO: - "Something went wrong" View if error
+            guard let data = currencies else {
+                refreshControl.endRefreshing()
+                self?.contentView.errorView(isVisible: true)
+                return
+            }
+            self?.contentView.errorView(isVisible: false)
             self?.actualCurrencies = data
             refreshControl.endRefreshing()
         }
@@ -61,10 +72,21 @@ class CurrenciesViewController: UIViewController {
     private func fetchCurrenciesData() {
         contentView.startIndicator()
         service.fetchCurrencies { [weak self] (error, currencies) in
-            guard let data = currencies else { return } // TODO: - "Something went wrong" View if error
+            guard let data = currencies else {
+                self?.contentView.errorView(isVisible: true)
+                self?.contentView.stopIndicator()
+                return
+            }
+            self?.contentView.errorView(isVisible: false)
             self?.actualCurrencies = data
             self?.contentView.stopIndicator()
         }
+    }
+
+// MARK: - Error View Refresh Button
+    
+    func refresh() {
+        fetchCurrenciesData()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -88,7 +110,7 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
 //            let noDataView = ErrorView()
 //            tableView.backgroundView = noDataView
-            tableView.separatorStyle = .none
+//            tableView.separatorStyle = .none
         }
         return numOfSections
     }
