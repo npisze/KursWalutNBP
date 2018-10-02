@@ -15,21 +15,6 @@ class CurrencyView: BaseView {
     private var currenciesTable = UITableView()
     private var labelsView = InfoLabelsView()
     
-    func setUPTable(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-        currenciesTable.delegate = delegate
-        currenciesTable.dataSource = dataSource
-        currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
-        currenciesTable.allowsSelection = false
-    }
-    
-    func addRefresh(_ refreshControl: UIRefreshControl) {
-        currenciesTable.addSubview(refreshControl)
-    }
-    
-    func reloadTable() {
-        currenciesTable.reloadData()
-    }
-
     override func addSubviews() {
         addSubview(labelsView)
         addSubview(currenciesTable)
@@ -53,6 +38,26 @@ class CurrencyView: BaseView {
         backgroundColor = UIColor.orange
     }
     
+    func errorViewAddRefreshBtn(withTarget target: RefreshButton){
+        errorView.addRefreshButton(btnVC: target)
+    }
+    
+    func setUPTable(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        currenciesTable.delegate = delegate
+        currenciesTable.dataSource = dataSource
+        currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
+        currenciesTable.allowsSelection = false
+        currenciesTable.backgroundColor = UIColor.init(red: 1, green: 0.87, blue: 0.68, alpha: 1)
+    }
+    
+    func addRefresh(_ refreshControl: UIRefreshControl) {
+        currenciesTable.addSubview(refreshControl)
+    }
+    
+    func reloadTable() {
+        currenciesTable.reloadData()
+    }
+
     func startIndicator(){
         DispatchQueue.main.async { [weak self] in
             self?.spinnerView.start()

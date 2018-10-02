@@ -43,6 +43,7 @@ class CurrencyTableViewCell: UITableViewCell {
     }
     
     private func setUpCellView() {
+        backgroundColor = UIColor.init(red: 1, green: 0.87, blue: 0.68, alpha: 0.5)
         currencyCodeLabel.textAlignment = .center
         bidLabel.textAlignment = .center
         askLabel.textAlignment = .center

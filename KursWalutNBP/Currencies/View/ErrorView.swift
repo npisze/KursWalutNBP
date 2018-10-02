@@ -24,6 +24,9 @@ class ErrorView: BaseView {
     }
     
     override func setupViews() {
+        backgroundColor = UIColor.init(red: 1, green: 0.87, blue: 0.68, alpha: 1)
+        alpha = 1.0
+        
         errorLabel.text = "There seems to be a problem."
         errorLabel.textColor = UIColor.black
         errorLabel.textAlignment = .center
