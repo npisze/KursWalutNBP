@@ -89,6 +89,8 @@ class CurrenciesViewController: UIViewController, RefreshButton {
         fetchCurrenciesData()
     }
     
+// MARK: - Hide/Show Navigation Bar
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             navigationController?.setNavigationBarHidden(true, animated: true)
@@ -107,10 +109,6 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
         if numOfSections > 0 {
             tableView.separatorStyle = .singleLine
             tableView.backgroundView = nil
-        } else {
-//            let noDataView = ErrorView()
-//            tableView.backgroundView = noDataView
-//            tableView.separatorStyle = .none
         }
         return numOfSections
     }

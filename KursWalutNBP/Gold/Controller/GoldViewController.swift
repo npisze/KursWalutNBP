@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoldViewController: UIViewController {
+class GoldViewController: UIViewController, RefreshButton {
 
     lazy var contentView: GoldView = {
         return GoldView(frame: .zero)
@@ -32,6 +32,7 @@ class GoldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBar()
+        setupErrorView()
         fetchGoldData()
     }
     
@@ -57,5 +58,15 @@ class GoldViewController: UIViewController {
             self?.goldData = data
             self?.contentView.stopIndicator()
         }
+    }
+
+    private func setupErrorView(){
+        contentView.errorViewAddRefreshBtn(withTarget: self)
+    }
+    
+// MARK: - Error View Refresh Button
+    
+    func refresh() {
+        fetchGoldData()
     }
 }

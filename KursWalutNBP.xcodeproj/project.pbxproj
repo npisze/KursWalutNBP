@@ -114,6 +114,7 @@
 		F9A66F4A213F033700881B54 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F9F9C5362163DFA5004BB6C7 /* ErrorView */,
 				F9A66F4B213F037A00881B54 /* Service.swift */,
 				F9A66F562141998900881B54 /* HttpErrorEnum.swift */,
 				F9A66F6C2144140800881B54 /* APIProvider.swift */,
@@ -156,7 +157,6 @@
 				F99C9DEA213BD2840027CF87 /* CurrencyTableViewCell.swift */,
 				F9A66F732145150900881B54 /* InfoLabelsView.swift */,
 				F9A66F80214964DB00881B54 /* CurrencyView.swift */,
-				F9A66F82214A750900881B54 /* ErrorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +299,14 @@
 				F9F9C5342163805A004BB6C7 /* RefreshButton.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F9F9C5362163DFA5004BB6C7 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				F9A66F82214A750900881B54 /* ErrorView.swift */,
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

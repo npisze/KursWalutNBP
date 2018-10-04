@@ -14,7 +14,7 @@ final class DataService {
 
     func fetchCurrencies(completion: @escaping (_ error: Error?, _ data: Currencies?) -> Void) {
         
-        guard let currenciesURL = getPlistUrl(for: "currenciesURL") else { return } // jesli return to error dla plist
+        guard let currenciesURL = getPlistUrl(for: "currenciesURL") else { return }
         
         apiProvider.fetch(from: currenciesURL) { (error, currencies: [Currencies]?) in
             DispatchQueue.main.async {

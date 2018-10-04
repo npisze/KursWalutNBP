@@ -25,6 +25,7 @@ class ErrorView: BaseView {
         
         refreshBtn.setTitle("Refresh", for: .normal)
         refreshBtn.setTitleColor(.orange, for: .normal)
+        refreshBtn.setTitleColor(UIColor.brown, for: .highlighted)
         refreshBtn.addTarget(btnVC, action: #selector(RefreshButton.refresh), for: .touchUpInside)
     }
     

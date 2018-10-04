@@ -43,6 +43,10 @@ class GoldView: BaseView {
         }
     }
     
+    func errorViewAddRefreshBtn(withTarget target: RefreshButton){
+        errorView.addRefreshButton(btnVC: target)
+    }
+    
     func updateGoldLabel(value: Double?, data: String?) {
         guard let value = value, let data = data else { return }
         goldLabel.text = "Aktualna cena 1 g złota, \nopublikowana dnia: \n\(data.asPlDate())\n wynosi: \(value.inCash)"
