@@ -51,7 +51,11 @@ class GoldViewController: UIViewController, RefreshButton {
         service.fetchGoldData { [weak self] (error, gold) in
             guard let data = gold else {
                 self?.contentView.stopIndicator()
-                self?.contentView.errorView(isVisible: true)
+                if (self?.goldData != nil) {
+                    self?.alertForError()
+                } else {
+                    self?.contentView.errorView(isVisible: true)
+                }
                 return
             }
             self?.contentView.errorView(isVisible: false)
@@ -60,6 +64,12 @@ class GoldViewController: UIViewController, RefreshButton {
         }
     }
 
+    private func alertForError() {
+        let alert = UIAlertController(title: "Problem", message: "Nie udało się pobrać danych", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     private func setupErrorView(){
         contentView.errorViewAddRefreshBtn(withTarget: self)
     }

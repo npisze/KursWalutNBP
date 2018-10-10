@@ -36,7 +36,27 @@
 		F9D5B03D2152647B001D182F /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5B03C2152647B001D182F /* WalletViewController.swift */; };
 		F9D5B040215264AC001D182F /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5B03F215264AC001D182F /* WalletView.swift */; };
 		F9F9C5352163805A004BB6C7 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F9C5342163805A004BB6C7 /* RefreshButton.swift */; };
+		F9F9C53E216A1178004BB6C7 /* KursWalutNBPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F9C53D216A1178004BB6C7 /* KursWalutNBPUITests.swift */; };
+		F9F9C54D216A13BD004BB6C7 /* KursWalutNBPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F9C54C216A13BD004BB6C7 /* KursWalutNBPTests.swift */; };
+		F9F9C555216A373E004BB6C7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F9C554216A373E004BB6C7 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9F9C540216A1178004BB6C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A6D55C21344E840021D361 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A6D56321344E840021D361;
+			remoteInfo = KursWalutNBP;
+		};
+		F9F9C54F216A13BD004BB6C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A6D55C21344E840021D361 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A6D56321344E840021D361;
+			remoteInfo = KursWalutNBP;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1A8711CD40C86EE0208AE2E3 /* Pods-KursWalutNBP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KursWalutNBP.release.xcconfig"; path = "Pods/Target Support Files/Pods-KursWalutNBP/Pods-KursWalutNBP.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +92,13 @@
 		F9D5B03C2152647B001D182F /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		F9D5B03F215264AC001D182F /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		F9F9C5342163805A004BB6C7 /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
+		F9F9C53B216A1178004BB6C7 /* KursWalutNBPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KursWalutNBPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F9C53D216A1178004BB6C7 /* KursWalutNBPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursWalutNBPUITests.swift; sourceTree = "<group>"; };
+		F9F9C53F216A1178004BB6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F9C54A216A13BC004BB6C7 /* KursWalutNBPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KursWalutNBPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F9C54C216A13BD004BB6C7 /* KursWalutNBPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursWalutNBPTests.swift; sourceTree = "<group>"; };
+		F9F9C54E216A13BD004BB6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F9C554216A373E004BB6C7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +107,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4230A9CEB074BCC826018F /* Pods_KursWalutNBP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C538216A1178004BB6C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C547216A13BC004BB6C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +155,6 @@
 		F9A66F4A213F033700881B54 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F9F9C5362163DFA5004BB6C7 /* ErrorView */,
 				F9A66F4B213F037A00881B54 /* Service.swift */,
 				F9A66F562141998900881B54 /* HttpErrorEnum.swift */,
 				F9A66F6C2144140800881B54 /* APIProvider.swift */,
@@ -215,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				F9A6D56621344E840021D361 /* KursWalutNBP */,
+				F9F9C53C216A1178004BB6C7 /* KursWalutNBPUITests */,
+				F9F9C54B216A13BC004BB6C7 /* KursWalutNBPTests */,
 				F9A6D56521344E840021D361 /* Products */,
 				2266BCFAEC8CC142019A3AB4 /* Pods */,
 				DC52C5C03BEA12055151C8EF /* Frameworks */,
@@ -225,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				F9A6D56421344E840021D361 /* KursWalutNBP.app */,
+				F9F9C53B216A1178004BB6C7 /* KursWalutNBPUITests.xctest */,
+				F9F9C54A216A13BC004BB6C7 /* KursWalutNBPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,16 +276,16 @@
 		F9A6D56621344E840021D361 /* KursWalutNBP */ = {
 			isa = PBXGroup;
 			children = (
-				F9F9C531215BCA32004BB6C7 /* Protocols */,
 				F9D5B03A21526451001D182F /* Wallet */,
 				F92020942151386900772A64 /* Activity */,
 				F9A66F4D213F05B300881B54 /* Main */,
 				F9A66F772146CF8700881B54 /* Base */,
 				F9A66F52213F069900881B54 /* Gold */,
 				F9A66F4E213F05E400881B54 /* Currencies */,
+				F9F9C5362163DFA5004BB6C7 /* ErrorView */,
 				F9A66F4A213F033700881B54 /* Services */,
-				F9A6D58D2137F3690021D361 /* Resources */,
 				F9D06323213E9D6100C832E8 /* Extensions */,
+				F9A6D58D2137F3690021D361 /* Resources */,
 			);
 			path = KursWalutNBP;
 			sourceTree = "<group>";
@@ -264,6 +308,7 @@
 				F9A66F712144392000881B54 /* CollectionExtension.swift */,
 				F9A66F7E2149376D00881B54 /* StringExtension.swift */,
 				F9A66F86214D6DCA00881B54 /* LabelExtension.swift */,
+				F9F9C554216A373E004BB6C7 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,8 +350,27 @@
 			isa = PBXGroup;
 			children = (
 				F9A66F82214A750900881B54 /* ErrorView.swift */,
+				F9F9C531215BCA32004BB6C7 /* Protocols */,
 			);
 			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		F9F9C53C216A1178004BB6C7 /* KursWalutNBPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9F9C53D216A1178004BB6C7 /* KursWalutNBPUITests.swift */,
+				F9F9C53F216A1178004BB6C7 /* Info.plist */,
+			);
+			path = KursWalutNBPUITests;
+			sourceTree = "<group>";
+		};
+		F9F9C54B216A13BC004BB6C7 /* KursWalutNBPTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9F9C54C216A13BD004BB6C7 /* KursWalutNBPTests.swift */,
+				F9F9C54E216A13BD004BB6C7 /* Info.plist */,
+			);
+			path = KursWalutNBPTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,18 +395,62 @@
 			productReference = F9A6D56421344E840021D361 /* KursWalutNBP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F9F9C53A216A1178004BB6C7 /* KursWalutNBPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F9C542216A1178004BB6C7 /* Build configuration list for PBXNativeTarget "KursWalutNBPUITests" */;
+			buildPhases = (
+				F9F9C537216A1178004BB6C7 /* Sources */,
+				F9F9C538216A1178004BB6C7 /* Frameworks */,
+				F9F9C539216A1178004BB6C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9F9C541216A1178004BB6C7 /* PBXTargetDependency */,
+			);
+			name = KursWalutNBPUITests;
+			productName = KursWalutNBPUITests;
+			productReference = F9F9C53B216A1178004BB6C7 /* KursWalutNBPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F9F9C549216A13BC004BB6C7 /* KursWalutNBPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F9C551216A13BD004BB6C7 /* Build configuration list for PBXNativeTarget "KursWalutNBPTests" */;
+			buildPhases = (
+				F9F9C546216A13BC004BB6C7 /* Sources */,
+				F9F9C547216A13BC004BB6C7 /* Frameworks */,
+				F9F9C548216A13BC004BB6C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9F9C550216A13BD004BB6C7 /* PBXTargetDependency */,
+			);
+			name = KursWalutNBPTests;
+			productName = KursWalutNBPTests;
+			productReference = F9F9C54A216A13BC004BB6C7 /* KursWalutNBPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F9A6D55C21344E840021D361 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = npisze;
 				TargetAttributes = {
 					F9A6D56321344E840021D361 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					F9F9C53A216A1178004BB6C7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F9A6D56321344E840021D361;
+					};
+					F9F9C549216A13BC004BB6C7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F9A6D56321344E840021D361;
 					};
 				};
 			};
@@ -360,6 +468,8 @@
 			projectRoot = "";
 			targets = (
 				F9A6D56321344E840021D361 /* KursWalutNBP */,
+				F9F9C53A216A1178004BB6C7 /* KursWalutNBPUITests */,
+				F9F9C549216A13BC004BB6C7 /* KursWalutNBPTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +482,20 @@
 				F99C9DE9213B14FF0027CF87 /* urlStrings.plist in Resources */,
 				F9A6D57221344E860021D361 /* LaunchScreen.storyboard in Resources */,
 				F9A6D56F21344E860021D361 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C539216A1178004BB6C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C548216A13BC004BB6C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +570,40 @@
 				F920209A21513E5100772A64 /* SpinnerView.swift in Sources */,
 				F9A66F742145150900881B54 /* InfoLabelsView.swift in Sources */,
 				F9D5B040215264AC001D182F /* WalletView.swift in Sources */,
+				F9F9C555216A373E004BB6C7 /* ColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C537216A1178004BB6C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F9C53E216A1178004BB6C7 /* KursWalutNBPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F9C546216A13BC004BB6C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F9C54D216A13BD004BB6C7 /* KursWalutNBPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9F9C541216A1178004BB6C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A6D56321344E840021D361 /* KursWalutNBP */;
+			targetProxy = F9F9C540216A1178004BB6C7 /* PBXContainerItemProxy */;
+		};
+		F9F9C550216A13BD004BB6C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A6D56321344E840021D361 /* KursWalutNBP */;
+			targetProxy = F9F9C54F216A13BD004BB6C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F9A6D57021344E860021D361 /* LaunchScreen.storyboard */ = {
@@ -615,6 +769,94 @@
 			};
 			name = Release;
 		};
+		F9F9C543216A1178004BB6C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2BNX4295Q;
+				INFOPLIST_FILE = KursWalutNBPUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KursWalutNBP;
+			};
+			name = Debug;
+		};
+		F9F9C544216A1178004BB6C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2BNX4295Q;
+				INFOPLIST_FILE = KursWalutNBPUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KursWalutNBP;
+			};
+			name = Release;
+		};
+		F9F9C552216A13BD004BB6C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2BNX4295Q;
+				INFOPLIST_FILE = KursWalutNBPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KursWalutNBP.app/KursWalutNBP";
+			};
+			name = Debug;
+		};
+		F9F9C553216A13BD004BB6C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2BNX4295Q;
+				INFOPLIST_FILE = KursWalutNBPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = npisze.KursWalutNBPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KursWalutNBP.app/KursWalutNBP";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,6 +874,24 @@
 			buildConfigurations = (
 				F9A6D57721344E860021D361 /* Debug */,
 				F9A6D57821344E860021D361 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9F9C542216A1178004BB6C7 /* Build configuration list for PBXNativeTarget "KursWalutNBPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F9C543216A1178004BB6C7 /* Debug */,
+				F9F9C544216A1178004BB6C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9F9C551216A13BD004BB6C7 /* Build configuration list for PBXNativeTarget "KursWalutNBPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F9C552216A13BD004BB6C7 /* Debug */,
+				F9F9C553216A13BD004BB6C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

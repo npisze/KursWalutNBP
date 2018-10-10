@@ -10,6 +10,12 @@ import UIKit
 
 class SpinnerView: BaseView {
     
+    var isAnimating: Bool {
+        get {
+            return activityIndicator.isAnimating
+        }
+    }
+    
     private let activityIndicator = UIActivityIndicatorView()
     
     override func addSubviews() {
@@ -23,7 +29,7 @@ class SpinnerView: BaseView {
     }
     
     override func setupViews() {
-        backgroundColor = UIColor.init(red: 1, green: 0.87, blue: 0.68, alpha: 0.5)
+        backgroundColor = UIColor.peach
         activityIndicator.activityIndicatorViewStyle = .whiteLarge
         activityIndicator.color = .orange
         activityIndicator.hidesWhenStopped = true

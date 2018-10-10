@@ -55,7 +55,11 @@ class CurrenciesViewController: UIViewController, RefreshButton {
         service.fetchCurrencies { [weak self] (error, currencies) in
             guard let data = currencies else {
                 refreshControl.endRefreshing()
-                self?.contentView.errorView(isVisible: true)
+                if self?.actualCurrencies != nil {
+                    self?.alertForError()
+                } else {
+                    self?.contentView.errorView(isVisible: true)
+                }
                 return
             }
             self?.contentView.errorView(isVisible: false)
@@ -83,6 +87,12 @@ class CurrenciesViewController: UIViewController, RefreshButton {
         }
     }
 
+    private func alertForError() {
+        let alert = UIAlertController(title: "Problem", message: "Nie udało się pobrać danych", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 // MARK: - Error View Refresh Button
     
     func refresh() {

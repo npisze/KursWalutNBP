@@ -11,6 +11,12 @@ import SnapKit
 
 class CurrencyView: BaseView {
     
+    var indicatorIsAnimating: Bool {
+        get {
+            return spinnerView.isAnimating
+        }
+    }
+    
     private let spinnerView = SpinnerView()
     private var currenciesTable = UITableView()
     private var labelsView = InfoLabelsView()
@@ -55,7 +61,7 @@ class CurrencyView: BaseView {
         currenciesTable.dataSource = dataSource
         currenciesTable.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyCell")
         currenciesTable.allowsSelection = false
-        currenciesTable.backgroundColor = UIColor.init(red: 1, green: 0.87, blue: 0.68, alpha: 1)
+        currenciesTable.backgroundColor = UIColor.peach
     }
     
     func addRefresh(_ refreshControl: UIRefreshControl) {
