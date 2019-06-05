@@ -52,13 +52,13 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         }
 
         let fromIndex = tabBarController.selectedIndex
-        let toIndex = viewControllers?.index(of: viewController)
+        let toIndex = viewControllers?.firstIndex(of: viewController)
         
         if fromIndex > toIndex! { // <--- kiedy to wybuchnie?
-            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIViewAnimationOptions.transitionFlipFromRight) { (finished:Bool) in
+            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIView.AnimationOptions.transitionFlipFromRight) { (finished:Bool) in
             }
         } else {
-            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIViewAnimationOptions.transitionFlipFromLeft) { (finished:Bool) in
+            UIView.transition(from: fromView, to: toView, duration: 0.4, options: UIView.AnimationOptions.transitionFlipFromLeft) { (finished:Bool) in
             }
         }
         return true

@@ -7,6 +7,6 @@ target 'KursWalutNBP' do
 
   # Pods for KursWalutNBP
 
-	pod 'SnapKit', '~> 4.0'
+	pod 'SnapKit'
 
 end

@@ -46,7 +46,7 @@ class CurrenciesViewController: UIViewController, RefreshButton {
     }
     
     private func setupRefreshControl() {
-        refreshControl.addTarget(self, action: #selector(refrechData(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(refrechData(_:)), for: UIControl.Event.valueChanged)
         refreshControl.tintColor = UIColor.orange
         
     }
@@ -88,7 +88,7 @@ class CurrenciesViewController: UIViewController, RefreshButton {
     }
 
     private func alertForError() {
-        let alert = UIAlertController(title: "Problem", message: "Nie udało się pobrać danych", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Problem", message: "Nie udało się pobrać danych", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

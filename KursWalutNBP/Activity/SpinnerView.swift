@@ -30,7 +30,7 @@ class SpinnerView: BaseView {
     
     override func setupViews() {
         backgroundColor = UIColor.peach
-        activityIndicator.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator.style = .whiteLarge
         activityIndicator.color = .orange
         activityIndicator.hidesWhenStopped = true
     }
